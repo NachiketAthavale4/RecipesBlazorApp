@@ -1,0 +1,58 @@
+﻿<div class="row">
+    <div class="col-sm-12">
+        @if (RecipeItem == null || string.IsNullOrWhiteSpace(RecipeItem.ImagePath))
+        {
+            <img src="" alt="" class="img-fluid" />
+        }
+        else
+        {
+            <img src="@RecipeItem.ImagePath" alt="@RecipeItem.Name" class="img-fluid" />
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        @if (RecipeItem == null || string.IsNullOrWhiteSpace(RecipeItem.Name))
+        {
+            <h1>Recipe Name</h1>
+        }
+        else
+        {
+            <h1>@RecipeItem.Name</h1>
+        }
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="btn-group mx-3" @onclick="@(e => OnDropDownClicked(e))">
+        <button class="btn btn-primary dropdown-toggle" type="button">
+            Manage Recipe
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">To Shopping List</a></li>
+            <li><a href="#">Edit Recipe</a></li>
+            <li><a href="#">Delete Recipe</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        @if (RecipeItem == null || string.IsNullOrWhiteSpace(RecipeItem.Description))
+        {
+            <h1>Description</h1>
+        }
+        else
+        {
+            <h1>@RecipeItem.Description</h1>
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        Ingredients
+    </div>
+</div>

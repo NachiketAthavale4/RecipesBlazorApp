@@ -1,0 +1,17 @@
+﻿@using RecipesBook.Client.ShoppingList.ShopEdit
+@page "/shopping-list"
+
+<div class="row">
+    <div class="col-10">
+        <ShoppingEdit></ShoppingEdit>
+        <hr />
+        <ul class="list-group">
+            @foreach (var ingredient in Ingredients)
+            {
+                <a class="list-group-item" style="cursor: pointer;">
+                    @ingredient.Name (@ingredient.Amount) 
+                </a>
+            }
+        </ul>
+    </div>
+</div>

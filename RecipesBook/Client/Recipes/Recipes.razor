@@ -1,0 +1,11 @@
+﻿@page "/"
+@page "/recipes"
+
+<div class="row">
+    <div class="col-md-5">
+        <RecipeList OnRecipeSelected="OnRecipeItemSelected" />
+    </div>
+    <div class="col-md-7">
+        <RecipeDetail @bind-RecipeItem="@SelectedRecipe" />
+    </div>
+</div>

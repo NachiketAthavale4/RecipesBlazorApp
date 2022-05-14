@@ -1,0 +1,11 @@
+﻿@using RecipesBook.Shared; 
+
+<a class="list-group-item clearfix" @onclick="@(e => OnRecipeItemSelectedByUser(e, Recipe.Name))">
+    <div class="float-left">
+        <h4 class="list-group-item">@Recipe.Name</h4>
+        <p class="list-group-item">@Recipe.Description</p>
+    </div>
+    <span class="float-right">
+        <img class="img-responsive" alt="@Recipe.Name" src="@Recipe.ImagePath" style="max-height: 90px;" />
+    </span>
+</a>
